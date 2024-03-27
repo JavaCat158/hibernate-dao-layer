@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - logicalFilePath: db/changelog/db.changelog-v1.yaml
+  - changeSet:
+      author: whoareyou
+      id: 1
+      changes:
+        - insert:
+            tableName: persons
+            columns:
+              - column:
+                  name: name
+                  value: "Alexandr"
+              - column:
+                  name: surname
+                  value: "Pushkin"
+              - column:
+                  name: age
+                  value: 33
+              - column:
+                  name: phonenumber
+                  value: 258741369
+              - column:
+                  name: city_of_living
+                  value: "Babushka"
+
+
