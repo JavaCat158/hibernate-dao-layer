@@ -13,17 +13,17 @@ import java.util.List;
 @RestController
 public class CityController {
 
+
+    private final RepositoryPersons personRepository;
+
     @Autowired
-    private RepositoryPersons personRepository;
+    public CityController(RepositoryPersons personRepository) {
+        this.personRepository = personRepository;
+    }
 
     @GetMapping("/persons/by-city")
     public List<Query> getPersonsByCity(@RequestParam String city) {
         return personRepository.getByCity(city);
-    }
-
-    @GetMapping("/person")
-    public void addPerson() {
-        personRepository.updateTable();
     }
 
     @GetMapping("/all")

@@ -12,7 +12,7 @@ import java.util.List;
 @Repository
 public class RepositoryPersons {
     @PersistenceContext
-    EntityManager entityManager;
+    private EntityManager entityManager;
 
     public List<Query> getByCity(String city) {
         Query persons = entityManager.createQuery("select p from Persons p where p.city_of_living= :city", Persons.class);
