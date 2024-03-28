@@ -26,7 +26,7 @@ import java.util.stream.Collectors;
 public class DaoRepository {
 
     @PersistenceContext
-    EntityManager entityManager;
+    private EntityManager entityManager;
     private final String productName = read("data.sql");
 
 

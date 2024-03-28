@@ -19,19 +19,19 @@ public class Customers {
 
     @Getter
     @Setter
-    String name;
+    private String name;
 
     @Getter
     @Setter
-    String surname;
+    private String surname;
 
     @Getter
     @Setter
-    int age;
+    private int age;
 
     @Getter
     @Setter
-    int phonenumber;
+    private int phonenumber;
 
     @OneToMany
     private Set<Orders> orders;
