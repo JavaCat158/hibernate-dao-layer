@@ -13,7 +13,7 @@ import java.util.List;
 @RestController
 public class CityController {
 
-    private RepositoryPersons personRepository;
+    private final RepositoryPersons personRepository;
 
     @Autowired
     public CityController(RepositoryPersons personRepository) {

@@ -5,16 +5,14 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.Query;
 import jakarta.transaction.Transactional;
-import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@NoArgsConstructor
 @Repository
 public class RepositoryPersons {
     @PersistenceContext
-    EntityManager entityManager;
+    private EntityManager entityManager;
 
     public List<Query> getByCity(String city) {
         Query persons = entityManager.createQuery("select p from Persons p where p.city_of_living= :city", Persons.class);
