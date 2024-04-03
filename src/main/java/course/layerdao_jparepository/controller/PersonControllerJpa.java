@@ -62,17 +62,17 @@ public class PersonControllerJpa {
     }
 
     @GetMapping("/city")
-    public Person getByCity(@RequestParam String city) {
-        return personRepository.findByCity(city);
+    public List<Person> getByCity(@RequestParam String city) {
+        return personRepository.findQueryByCity(city);
     }
 
     @GetMapping("/age")
     public List<Person> getByAge(@RequestParam Integer age) {
-        return personRepository.findByIdAgeLessThanOrderByIdAgeAsc(age);
+        return personRepository.findQueryByIdAgeLessThanOrderByIdAgeAsc(age);
     }
 
     @GetMapping("/findNameSurname")
     public List<Person> getNameSurname(@RequestParam String name, @RequestParam String surname) {
-        return personRepository.findByIdNameAndIdSurname(name, surname).stream().toList();
+        return personRepository.findQueryByIdNameAndIdSurname(name, surname).stream().toList();
     }
 }
