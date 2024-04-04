@@ -1,8 +1,8 @@
 databaseChangeLog:
   - logicalFilePath: db/changelog/db.changelog-v1.yaml
   - changeSet:
+      id : name, surname, age
       author: whoareyou
-      id: 1
       changes:
         - insert:
             tableName: persons

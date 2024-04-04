@@ -5,36 +5,35 @@ import lombok.*;
 
 @AllArgsConstructor
 @Builder
-@Data
 @ToString
 @Entity
 public class Persons {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false)
-    private Long id;
-
     @Getter
     @Setter
     private String name;
 
+    @Id
     @Getter
     @Setter
-    private String surname;
+    @Column(name = "surname")
+    private String surName;
 
+    @Id
     @Getter
     @Setter
     private int age;
 
     @Getter
     @Setter
-    @Column(name = "phone_number", nullable = false)
-    private int phonenumber;
+    @Column(name = "phonenumber")
+    private Long phoneNumber;
 
     @Getter
     @Setter
-    private String city_of_living;
+    @Column(name = "city_of_living")
+    private String city;
 
     public Persons() {
 
