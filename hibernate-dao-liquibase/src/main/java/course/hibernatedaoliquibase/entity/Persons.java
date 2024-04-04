@@ -6,6 +6,7 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 @ToString
+@IdClass(PersonsId.class)
 @Entity
 public class Persons {
 
